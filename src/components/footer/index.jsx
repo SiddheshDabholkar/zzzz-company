@@ -36,20 +36,20 @@ const SocialMediaContainer = styled.div`
   @media screen and (max-width: 768px) {
     flex-wrap: wrap;
     justify-content: center;
-  } 
+  }
 `;
 const SocialIconLink = styled.a`
   color: #fff;
   font-size: 20px;
   padding: 10px;
-  &:hover{
-    color:black;
-    transition:200ms all ease-in-out;
+  &:hover {
+    color: black;
+    transition: 200ms all ease-in-out;
   }
 `;
 
-const CopyRight=styled.h3`
-  color:#fff;
+const CopyRight = styled.h3`
+  color: #fff;
   font-size: 18px;
 `;
 
@@ -82,7 +82,9 @@ function Footerr() {
               <YoutubeOutlined />
             </SocialIconLink>
           </SocialMediaContainer>
-          <CopyRight> Made with ♥ by zzzzzz ©  {new Date().getFullYear()}</CopyRight>
+          <CopyRight>
+            Made with ♥ by siddhesh Dabholkar © {new Date().getFullYear()}
+          </CopyRight>
           <BackTop />
         </FooterContainer>
       </Layout>

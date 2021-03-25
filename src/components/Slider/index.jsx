@@ -1,9 +1,10 @@
 import React from "react";
-import { Layout, Menu, Affix } from "antd";
+import { Layout, Affix } from "antd";
 import styled from "styled-components";
 import { theme } from "../theme";
 import { Link as LinkS } from "react-scroll";
 
+import { Menu } from "antd";
 const { Sider } = Layout;
 
 const SiderContainer = styled(Sider)`

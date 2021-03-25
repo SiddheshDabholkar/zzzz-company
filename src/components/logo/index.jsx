@@ -1,6 +1,7 @@
 import React from "react";
 import styled, { css } from "styled-components";
-import WebsiteLogo from '../../Assets/Logo/logo.svg'
+// import WebsiteLogo from '../../Assets/Logo/logo.svg'
+import WebsiteLogo from "../../Assets/Logo/logo.svg";
 
 const LogoContainer = styled.div`
   display: flex;
@@ -13,7 +14,7 @@ const LogoImg = styled.img`
   width: 8em;
   height: 8em;
   cursor: pointer;
-  left:0;
+  left: 0;
 
   ${({ inline }) =>
     inline &&
@@ -46,7 +47,7 @@ function Logo(props) {
   return (
     <>
       <LogoContainer inline={inline} small={small}>
-        <LogoImg src={WebsiteLogo} inline={inline} small={small}  />
+        <LogoImg src={WebsiteLogo} inline={inline} small={small} />
         <LogoText inline={inline} small={small}>
           zzzzzzz
         </LogoText>
