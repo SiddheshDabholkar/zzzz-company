@@ -1,5 +1,5 @@
 import React from "react";
-import { Layout, Button } from "antd";
+import { Layout } from "antd";
 import { theme } from "../theme";
 import { Link as LinkS } from "react-scroll";
 import styled from "styled-components";
