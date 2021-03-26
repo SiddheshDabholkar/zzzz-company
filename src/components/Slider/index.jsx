@@ -1,11 +1,10 @@
-import React from "react";
-import { Layout, Affix } from "antd";
+import React, { useState } from "react";
+import { Link as LinkS } from "react-scroll";
 import styled from "styled-components";
 import { theme } from "../theme";
-import { Link as LinkS } from "react-scroll";
-
-import { Menu } from "antd";
+import { Layout, Menu, Affix } from "antd";
 const { Sider } = Layout;
+const { SubMenu } = Menu;
 
 const SiderContainer = styled(Sider)`
   .ant-layout-sider-zero-width-trigger {
@@ -28,21 +27,26 @@ const StyledLinkS = styled(LinkS)`
   }
 `;
 
-const SiderContent = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
-  background-color: #f0f2f5;
-`;
-
 const Sliderd = () => {
   return (
     <>
+      {/* <Layout> */}
       <Affix offsetTop={0}>
-        <SiderContainer collapsedWidth="0" defaultCollapsed="true" collapsible>
-          <Menu mode="inline" defaultSelectedKeys={["4"]}>
-            <SiderContent>
+        <Sider
+          breakpoint="lg"
+          collapsedWidth="0"
+          collapsedWidth="0"
+          defaultCollapsed="true"
+          collapsible
+        >
+          <div className="logo" />
+          <Menu
+            style={{ width: 200, height: "100%" }}
+            defaultSelectedKeys={["1"]}
+            defaultOpenKeys={["sub1"]}
+            mode="inline"
+          >
+            <Menu.Item key="1">
               <StyledLinkS
                 to="Home"
                 title="Home"
@@ -53,6 +57,8 @@ const Sliderd = () => {
               >
                 Home
               </StyledLinkS>
+            </Menu.Item>
+            <Menu.Item key="2">
               <StyledLinkS
                 to="About"
                 title="About"
@@ -63,6 +69,8 @@ const Sliderd = () => {
               >
                 About
               </StyledLinkS>
+            </Menu.Item>
+            <Menu.Item key="3">
               <StyledLinkS
                 to="Features"
                 title="Features"
@@ -73,6 +81,8 @@ const Sliderd = () => {
               >
                 Features
               </StyledLinkS>
+            </Menu.Item>
+            <Menu.Item key="4">
               <StyledLinkS
                 to="Services"
                 title="Services"
@@ -83,6 +93,8 @@ const Sliderd = () => {
               >
                 Services
               </StyledLinkS>
+            </Menu.Item>
+            <Menu.Item key="5">
               <StyledLinkS
                 to="ContactUS"
                 title="ContactUS"
@@ -93,9 +105,9 @@ const Sliderd = () => {
               >
                 Contact Us
               </StyledLinkS>
-            </SiderContent>
+            </Menu.Item>
           </Menu>
-        </SiderContainer>
+        </Sider>
       </Affix>
     </>
   );
