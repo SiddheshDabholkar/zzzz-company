@@ -4,6 +4,13 @@ import { theme } from "../theme";
 import { Link as LinkS } from "react-scroll";
 import styled from "styled-components";
 import Logo from "../logo";
+import {
+  HomeOutlined,
+  EyeOutlined,
+  BookOutlined,
+  CustomerServiceOutlined,
+  ContactsOutlined,
+} from "@ant-design/icons";
 
 const { Header } = Layout;
 
@@ -34,13 +41,15 @@ const StyledLinkS = styled(LinkS)`
   cursor: pointer;
   flex-direction: row;
   color: #fff;
-  font-size: 18px;
+  font-size: 15px;
   padding: 40px;
   justify-content: space-between;
+  align-items: center;
 
   &:hover {
     color: black;
     transition: 220ms all ease-in-out;
+    border-bottom: 2px solid #000;
   }
 
   @media screen and (max-width: 768px) {
@@ -57,6 +66,10 @@ const StyledLinkS = styled(LinkS)`
     padding: 8px;
     justify-content: space-between;
   }
+`;
+
+const StyledSpan = styled.span`
+  margin-left: 8px;
 `;
 
 function Headerrr() {
@@ -76,7 +89,8 @@ function Headerrr() {
               offset={50}
               duration={500}
             >
-              Home
+              <HomeOutlined />
+              <StyledSpan>Home</StyledSpan>
             </StyledLinkS>
             <StyledLinkS
               to="About"
@@ -86,7 +100,8 @@ function Headerrr() {
               offset={50}
               duration={500}
             >
-              About
+              <BookOutlined />
+              <StyledSpan>About</StyledSpan>
             </StyledLinkS>
             <StyledLinkS
               to="Features"
@@ -96,6 +111,8 @@ function Headerrr() {
               offset={50}
               duration={500}
             >
+              <EyeOutlined />
+              <StyledSpan></StyledSpan>
               Features
             </StyledLinkS>
             <StyledLinkS
@@ -106,8 +123,10 @@ function Headerrr() {
               offset={50}
               duration={500}
             >
-              Services
+              <CustomerServiceOutlined />
+              <StyledSpan>Services</StyledSpan>
             </StyledLinkS>
+
             <StyledLinkS
               to="ContactUS"
               title="ContactUS"
@@ -116,7 +135,8 @@ function Headerrr() {
               offset={50}
               duration={500}
             >
-              Contact Us
+              <ContactsOutlined />
+              <StyledSpan>Contact Us</StyledSpan>
             </StyledLinkS>
           </MenuContainer>
         </HeaderContainer>

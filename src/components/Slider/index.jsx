@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link as LinkS } from "react-scroll";
 import styled from "styled-components";
 import { theme } from "../theme";
@@ -10,6 +10,7 @@ import {
   CustomerServiceOutlined,
   ContactsOutlined,
 } from "@ant-design/icons";
+
 const { Sider } = Layout;
 
 const SiderContainer = styled(Sider)`
@@ -33,7 +34,22 @@ const StyledLinkS = styled(LinkS)`
   }
 `;
 
+const StyledMenu = styled(Menu)`
+  width: 200px;
+  padding: 30px;
+  height: 1000px;
+`;
+
+const StyledMenuItem = styled(Menu.Item)`
+  &:hover {
+    border-bottom: 1px solid #0052d4;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+  }
+`;
+
 const Sliderd = () => {
+  const [collapsed, setCollapsed] = useState(true);
   return (
     <>
       <Affix offsetTop={0}>
@@ -42,15 +58,15 @@ const Sliderd = () => {
           collapsedWidth="0"
           defaultCollapsed="true"
           collapsible
+          collapsed={!collapsed}
+          onCollapse={() => setCollapsed(!collapsed)}
         >
-          <div className="logo" />
-          <Menu
-            style={{ width: 200, height: "100%" }}
+          <StyledMenu
             defaultSelectedKeys={["1"]}
             defaultOpenKeys={["sub1"]}
             mode="inline"
           >
-            <Menu.Item icon={<HomeOutlined />}>
+            <StyledMenuItem icon={<HomeOutlined />}>
               Home
               <StyledLinkS
                 to="Home"
@@ -58,10 +74,11 @@ const Sliderd = () => {
                 spy={true}
                 smooth={true}
                 offset={50}
-                duration={500}
+                duration={700}
+                onClick={() => setCollapsed(false)}
               />
-            </Menu.Item>
-            <Menu.Item icon={<BookOutlined />}>
+            </StyledMenuItem>
+            <StyledMenuItem icon={<BookOutlined />}>
               About
               <StyledLinkS
                 to="About"
@@ -69,10 +86,11 @@ const Sliderd = () => {
                 spy={true}
                 smooth={true}
                 offset={50}
-                duration={500}
+                duration={700}
+                onClick={() => setCollapsed(false)}
               />
-            </Menu.Item>
-            <Menu.Item icon={<EyeOutlined />}>
+            </StyledMenuItem>
+            <StyledMenuItem icon={<EyeOutlined />}>
               Features
               <StyledLinkS
                 to="Features"
@@ -80,11 +98,11 @@ const Sliderd = () => {
                 spy={true}
                 smooth={true}
                 offset={50}
-                duration={500}
+                duration={700}
+                onClick={() => setCollapsed(false)}
               />
-            </Menu.Item>
-
-            <Menu.Item icon={<CustomerServiceOutlined />}>
+            </StyledMenuItem>
+            <StyledMenuItem icon={<CustomerServiceOutlined />}>
               Services
               <StyledLinkS
                 to="Services"
@@ -92,10 +110,11 @@ const Sliderd = () => {
                 spy={true}
                 smooth={true}
                 offset={50}
-                duration={500}
+                duration={700}
+                onClick={() => setCollapsed(false)}
               />
-            </Menu.Item>
-            <Menu.Item icon={<ContactsOutlined />}>
+            </StyledMenuItem>
+            <StyledMenuItem icon={<ContactsOutlined />}>
               Contact Us
               <StyledLinkS
                 to="ContactUS"
@@ -103,10 +122,11 @@ const Sliderd = () => {
                 spy={true}
                 smooth={true}
                 offset={50}
-                duration={500}
+                duration={700}
+                onClick={() => setCollapsed(false)}
               />
-            </Menu.Item>
-          </Menu>
+            </StyledMenuItem>
+          </StyledMenu>
         </SiderContainer>
       </Affix>
     </>
