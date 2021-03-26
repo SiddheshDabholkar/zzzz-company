@@ -1,10 +1,16 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link as LinkS } from "react-scroll";
 import styled from "styled-components";
 import { theme } from "../theme";
 import { Layout, Menu, Affix } from "antd";
+import {
+  HomeOutlined,
+  EyeOutlined,
+  BookOutlined,
+  CustomerServiceOutlined,
+  ContactsOutlined,
+} from "@ant-design/icons";
 const { Sider } = Layout;
-const { SubMenu } = Menu;
 
 const SiderContainer = styled(Sider)`
   .ant-layout-sider-zero-width-trigger {
@@ -30,11 +36,9 @@ const StyledLinkS = styled(LinkS)`
 const Sliderd = () => {
   return (
     <>
-      {/* <Layout> */}
       <Affix offsetTop={0}>
-        <Sider
+        <SiderContainer
           breakpoint="lg"
-          collapsedWidth="0"
           collapsedWidth="0"
           defaultCollapsed="true"
           collapsible
@@ -46,7 +50,8 @@ const Sliderd = () => {
             defaultOpenKeys={["sub1"]}
             mode="inline"
           >
-            <Menu.Item key="1">
+            <Menu.Item icon={<HomeOutlined />}>
+              Home
               <StyledLinkS
                 to="Home"
                 title="Home"
@@ -54,11 +59,10 @@ const Sliderd = () => {
                 smooth={true}
                 offset={50}
                 duration={500}
-              >
-                Home
-              </StyledLinkS>
+              />
             </Menu.Item>
-            <Menu.Item key="2">
+            <Menu.Item icon={<BookOutlined />}>
+              About
               <StyledLinkS
                 to="About"
                 title="About"
@@ -66,11 +70,10 @@ const Sliderd = () => {
                 smooth={true}
                 offset={50}
                 duration={500}
-              >
-                About
-              </StyledLinkS>
+              />
             </Menu.Item>
-            <Menu.Item key="3">
+            <Menu.Item icon={<EyeOutlined />}>
+              Features
               <StyledLinkS
                 to="Features"
                 title="Features"
@@ -78,11 +81,11 @@ const Sliderd = () => {
                 smooth={true}
                 offset={50}
                 duration={500}
-              >
-                Features
-              </StyledLinkS>
+              />
             </Menu.Item>
-            <Menu.Item key="4">
+
+            <Menu.Item icon={<CustomerServiceOutlined />}>
+              Services
               <StyledLinkS
                 to="Services"
                 title="Services"
@@ -90,11 +93,10 @@ const Sliderd = () => {
                 smooth={true}
                 offset={50}
                 duration={500}
-              >
-                Services
-              </StyledLinkS>
+              />
             </Menu.Item>
-            <Menu.Item key="5">
+            <Menu.Item icon={<ContactsOutlined />}>
+              Contact Us
               <StyledLinkS
                 to="ContactUS"
                 title="ContactUS"
@@ -102,12 +104,10 @@ const Sliderd = () => {
                 smooth={true}
                 offset={50}
                 duration={500}
-              >
-                Contact Us
-              </StyledLinkS>
+              />
             </Menu.Item>
           </Menu>
-        </Sider>
+        </SiderContainer>
       </Affix>
     </>
   );
