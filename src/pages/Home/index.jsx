@@ -21,10 +21,10 @@ const BkhImg = styled.div`
 
 const Above = styled.div`
   @media (min-width: 992px) {
-    padding: 80px 20px;
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 90px;
   }
 `;
 

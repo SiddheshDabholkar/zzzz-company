@@ -18,15 +18,6 @@ const Nextt = styled.div`
   min-width: 100%;
 `;
 
-const Above = styled.div`
-  @media (min-width: 992px) {
-    /* padding: 80px 20px; */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-`;
-
 function About() {
   return (
     <>
@@ -35,23 +26,21 @@ function About() {
           <SectionTitle light>About</SectionTitle>
         </SectionTitleContainer>
         <RemainingSection>
-          <Above>
-            <Fade left>
-              <Nextt reverse>
-                <AboutSection {...AboutContent1} />
-              </Nextt>
-            </Fade>
-            <Flip left>
-              <Nextt>
-                <AboutSection {...AboutContent2} />
-              </Nextt>
-            </Flip>
-            <Fade right>
-              <Nextt reverse>
-                <AboutSection {...AboutContent3} />
-              </Nextt>
-            </Fade>
-          </Above>
+          <Fade left>
+            <Nextt reverse>
+              <AboutSection {...AboutContent1} />
+            </Nextt>
+          </Fade>
+          <Flip left>
+            <Nextt>
+              <AboutSection {...AboutContent2} />
+            </Nextt>
+          </Flip>
+          <Fade right>
+            <Nextt reverse>
+              <AboutSection {...AboutContent3} />
+            </Nextt>
+          </Fade>
         </RemainingSection>
       </MainPageContainer>
     </>
