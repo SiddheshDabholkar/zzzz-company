@@ -8,25 +8,9 @@ export const SvgHolder = styled.div`
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-  width: 50%;
-  @media (max-width: 993px) {
-    padding: 8px;
-    width: 50%;
-  }
-  @media (max-width: 761px) {
-    padding: 8px;
-    width: 50%;
-  }
-  @media (max-width: 571px) {
-    padding: 15px;
-    width: 100%;
-  }
-  @media (max-width: 351px) {
-    padding: 6px;
-    width: 100%;
-  }
-  @media (max-width: 201px) {
-    padding: 5px;
-    width: 100%;
+  @media (min-width: 992px) {
+    width: 49%;
+    flex-wrap: nowrap;
+    /* display: inline-block; */
   }
 `;

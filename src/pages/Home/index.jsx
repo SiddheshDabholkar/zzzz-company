@@ -6,8 +6,9 @@ import { Paragraph } from "../../components/Paragraph";
 import { SvgHolder } from "../../components/SVGholder";
 import lottie from "lottie-web";
 import { SectionTitleContainer } from "../../components/SectionTitle/Container";
-import Image from "../../Assets/Image/8727.jpg";
 import styled from "styled-components";
+import Image from "../../Assets/Image/8727.jpg";
+
 const BkhImg = styled.div`
   background-image: url(${Image});
   width: inherit;
@@ -16,6 +17,15 @@ const BkhImg = styled.div`
   margin: 0px;
   background-repeat: no-repeat;
   background-size: cover;
+`;
+
+const Above = styled.div`
+  @media (min-width: 992px) {
+    padding: 80px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 `;
 
 function Home() {
@@ -33,17 +43,17 @@ function Home() {
   ///
   return (
     <>
-      <div>
-        <MainPageContainer name="Home" small Image={Image}>
-          <BkhImg>
-            <SectionTitleContainer>
-              <SectionTitle>zzzz</SectionTitle>
-            </SectionTitleContainer>
+      <MainPageContainer name="Home" small>
+        <BkhImg>
+          <SectionTitleContainer>
+            <SectionTitle>zzzz</SectionTitle>
+          </SectionTitleContainer>
+          <Above>
             <SvgHolder>
               <div className="container" ref={container}></div>
             </SvgHolder>
             <RemainingSection>
-              <Paragraph>
+              <Paragraph small>
                 <i>
                   "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
                   hendrerit et orci ac condimentum. In sed ex in enim laoreet
@@ -57,9 +67,9 @@ function Home() {
                 </i>
               </Paragraph>
             </RemainingSection>
-          </BkhImg>
-        </MainPageContainer>
-      </div>
+          </Above>
+        </BkhImg>
+      </MainPageContainer>
     </>
   );
 }
