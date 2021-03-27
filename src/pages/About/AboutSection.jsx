@@ -8,17 +8,6 @@ import lottie from "lottie-web";
 import styled from "styled-components";
 import svgq from "../../Assets/JSON/51634-train-buildings.json";
 
-const One = styled.div`
-  padding-top: 0px;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  align-items: center;
-  @media (max-width: 376px) {
-    width: 96%;
-  }
-`;
-
 const Twosub = styled.div`
   display: flex;
   flex-direction: column;
@@ -26,14 +15,30 @@ const Twosub = styled.div`
   align-items: center;
 `;
 
+const One = styled.div`
+  padding-top: 0px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  @media (min-width: 992px) {
+    width: 50%;
+  }
+  @media (max-width: 991px) {
+    width: 100%;
+  }
+`;
+
 const Two = styled.div`
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   align-items: center;
-  @media (max-width: 376px) {
-    flex-direction: column;
-    width: 96%;
+  @media (min-width: 992px) {
+    width: 50%;
+  }
+  @media (max-width: 992px) {
+    width: 100%;
   }
 `;
 
