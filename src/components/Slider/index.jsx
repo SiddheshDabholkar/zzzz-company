@@ -54,7 +54,7 @@ const Sliderd = () => {
     <>
       <Affix offsetTop={0}>
         <SiderContainer
-          breakpoint="lg"
+          breakpoint="xxl"
           collapsedWidth="0"
           defaultCollapsed="true"
           collapsible

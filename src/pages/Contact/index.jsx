@@ -1,5 +1,4 @@
 import React from "react";
-import styled from "styled-components";
 import { SectionTitle } from "../../components/SectionTitle";
 import { MainPageContainer } from "../../components/MainPageContainer";
 
@@ -8,9 +7,7 @@ function Contact() {
     <>
       <div>
         <MainPageContainer name="ContactUS">
-          <SectionTitle>
-            Contact Us
-          </SectionTitle>
+          <SectionTitle>Contact Us</SectionTitle>
         </MainPageContainer>
       </div>
     </>
