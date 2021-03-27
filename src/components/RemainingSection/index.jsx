@@ -11,6 +11,5 @@ export const RemainingSection = styled.div`
   @media (min-width: 992px) {
     width: 49%;
     flex-wrap: nowrap;
-    /* display: inline-block; */
   }
 `;
