@@ -8,7 +8,6 @@ import {
   HomeOutlined,
   EyeOutlined,
   BookOutlined,
-  CustomerServiceOutlined,
   ContactsOutlined,
 } from "@ant-design/icons";
 
@@ -114,17 +113,6 @@ function Headerrr() {
               <EyeOutlined />
               <StyledSpan></StyledSpan>
               Features
-            </StyledLinkS>
-            <StyledLinkS
-              to="Services"
-              title="Services"
-              spy={true}
-              smooth={true}
-              offset={50}
-              duration={500}
-            >
-              <CustomerServiceOutlined />
-              <StyledSpan>Services</StyledSpan>
             </StyledLinkS>
 
             <StyledLinkS
