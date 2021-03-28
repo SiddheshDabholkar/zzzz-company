@@ -4,9 +4,8 @@ import { Paragraph } from "../../components/Paragraph/index";
 import { SvgHolder } from "../../components/SVGholder/index";
 import { StyledButton } from "../../components/button/index";
 import { ButtonContainer } from "../../components/button/Container";
-import lottie from "lottie-web";
 import styled from "styled-components";
-import svgq from "../../Assets/JSON/51634-train-buildings.json";
+import lottie from "lottie-web";
 
 const Twosub = styled.div`
   display: flex;
@@ -44,15 +43,17 @@ const Two = styled.div`
 
 export default function AboutSection({ title, paragraph, svg, button }) {
   const container = useRef(null);
+
   useEffect(() => {
     lottie.loadAnimation({
       container: container.current,
       renderer: "svg",
       loop: true,
       autoplay: true,
-      animationData: svgq,
+      animationData: svg,
     });
   }, [svg]);
+
   return (
     <>
       <One>
