@@ -7,7 +7,6 @@ import {
   HomeOutlined,
   EyeOutlined,
   BookOutlined,
-  CustomerServiceOutlined,
   ContactsOutlined,
 } from "@ant-design/icons";
 
@@ -102,18 +101,7 @@ const Sliderd = () => {
                 onClick={() => setCollapsed(false)}
               />
             </StyledMenuItem>
-            <StyledMenuItem icon={<CustomerServiceOutlined />}>
-              Services
-              <StyledLinkS
-                to="Services"
-                title="Services"
-                spy={true}
-                smooth={true}
-                offset={50}
-                duration={700}
-                onClick={() => setCollapsed(false)}
-              />
-            </StyledMenuItem>
+
             <StyledMenuItem icon={<ContactsOutlined />}>
               Contact Us
               <StyledLinkS
