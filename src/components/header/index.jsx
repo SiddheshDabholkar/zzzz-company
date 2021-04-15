@@ -1,5 +1,5 @@
-import React from "react";
-import { Layout } from "antd";
+import React, { useState } from "react";
+import { Layout, Menu, Drawer, Button } from "antd";
 import { theme } from "../theme";
 import { Link as LinkS } from "react-scroll";
 import styled from "styled-components";
@@ -9,9 +9,24 @@ import {
   EyeOutlined,
   BookOutlined,
   ContactsOutlined,
+  BarsOutlined,
 } from "@ant-design/icons";
 
 const { Header } = Layout;
+
+const DrawerButton = styled(Button)`
+  background-color: #1038ed !important;
+  &:hover {
+    background-color: #1038ed;
+  }
+`;
+
+const MiddleContainer = styled.div`
+  align-items: center;
+  float: left;
+  display: flex;
+  flex-direction: row;
+`;
 
 const HeaderContainer = styled(Header)`
   width: 100%;
@@ -21,6 +36,23 @@ const HeaderContainer = styled(Header)`
   align-items: center;
   justify-content: space-between;
   background-color: ${theme.primary};
+`;
+
+const StyledMenu = styled(Menu)`
+  width: 200px;
+  padding: 30px;
+  height: auto;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+`;
+
+const StyledMenuItem = styled(Menu.Item)`
+  &:hover {
+    border-bottom: 1px solid #0052d4;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+  }
 `;
 
 const LogoContainer = styled.div``;
@@ -72,13 +104,26 @@ const StyledSpan = styled.span`
 `;
 
 function Headerrr() {
+  const [state, setState] = useState(false);
+  const { placement } = state;
+
+  const showDrawer = () => {
+    setState(true);
+  };
+
+  const onClose = () => {
+    setState(false);
+  };
   return (
     <>
       <Layout>
         <HeaderContainer>
-          <LogoContainer>
-            <Logo inline />
-          </LogoContainer>
+          <MiddleContainer>
+            <DrawerButton icon={<BarsOutlined />} onClick={showDrawer} />
+            <LogoContainer>
+              <Logo inline />
+            </LogoContainer>
+          </MiddleContainer>
           <MenuContainer>
             <StyledLinkS
               to="Home"
@@ -128,6 +173,77 @@ function Headerrr() {
             </StyledLinkS>
           </MenuContainer>
         </HeaderContainer>
+        <Drawer
+          placement="left"
+          closable={false}
+          onClose={onClose}
+          visible={state}
+          key={placement}
+        >
+          <StyledMenu
+            defaultSelectedKeys={["1"]}
+            defaultOpenKeys={["sub1"]}
+            mode="inline"
+          >
+            <StyledMenuItem icon={<HomeOutlined />}>
+              Home
+              <StyledLinkS
+                to="Home"
+                title="Home"
+                spy={true}
+                smooth={true}
+                offset={50}
+                duration={700}
+                onClick={() => {
+                  setState(false);
+                }}
+              />
+            </StyledMenuItem>
+            <StyledMenuItem icon={<BookOutlined />}>
+              About
+              <StyledLinkS
+                to="About"
+                title="About"
+                spy={true}
+                smooth={true}
+                offset={50}
+                duration={700}
+                onClick={() => {
+                  setState(false);
+                }}
+              />
+            </StyledMenuItem>
+            <StyledMenuItem icon={<EyeOutlined />}>
+              Features
+              <StyledLinkS
+                to="Features"
+                title="Features"
+                spy={true}
+                smooth={true}
+                offset={50}
+                duration={700}
+                onClick={() => {
+                  setState(false);
+                }}
+              />
+            </StyledMenuItem>
+
+            <StyledMenuItem icon={<ContactsOutlined />}>
+              Contact Us
+              <StyledLinkS
+                to="ContactUS"
+                title="ContactUS"
+                spy={true}
+                smooth={true}
+                offset={50}
+                duration={700}
+                onClick={() => {
+                  setState(false);
+                }}
+              />
+            </StyledMenuItem>
+          </StyledMenu>
+        </Drawer>
       </Layout>
     </>
   );

@@ -1,6 +1,5 @@
 import React from "react";
 import Headerrr from "../components/header";
-import Sliderd from "../components/Slider";
 import Footerr from "../components/footer";
 import { Layout } from "antd";
 import Home from "../pages/Home";
@@ -12,15 +11,12 @@ function Main() {
   return (
     <>
       <Layout>
-        <Sliderd />
-        <Layout>
-          <Headerrr />
-          <Home />
-          <About />
-          <Features />
-          <Contact />
-          <Footerr />
-        </Layout>
+        <Headerrr />
+        <Home />
+        <About />
+        <Features />
+        <Contact />
+        <Footerr />
       </Layout>
     </>
   );
