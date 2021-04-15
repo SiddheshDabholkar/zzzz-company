@@ -10,6 +10,7 @@ import {
   TwitterOutlined,
   MediumOutlined,
   LinkedinOutlined,
+  UpCircleOutlined,
 } from "@ant-design/icons";
 
 const { Footer } = Layout;
@@ -85,7 +86,9 @@ function Footerr() {
           <CopyRight>
             Made with ♥ by siddhesh Dabholkar © {new Date().getFullYear()}
           </CopyRight>
-          <BackTop />
+          <BackTop>
+            <UpCircleOutlined style={{ fontSize: "30px" }} />
+          </BackTop>
         </FooterContainer>
       </Layout>
     </>
