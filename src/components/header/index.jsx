@@ -187,13 +187,13 @@ function Headerrr() {
           >
             <StyledMenuItem icon={<HomeOutlined />}>
               Home
-              <StyledLinkS
+              <LinkS
                 to="Home"
                 title="Home"
                 spy={true}
                 smooth={true}
-                offset={50}
-                duration={700}
+                offset={0}
+                duration={800}
                 onClick={() => {
                   setState(false);
                 }}
@@ -201,13 +201,13 @@ function Headerrr() {
             </StyledMenuItem>
             <StyledMenuItem icon={<BookOutlined />}>
               About
-              <StyledLinkS
+              <LinkS
                 to="About"
                 title="About"
                 spy={true}
                 smooth={true}
-                offset={50}
-                duration={700}
+                offset={0}
+                duration={800}
                 onClick={() => {
                   setState(false);
                 }}
@@ -220,8 +220,8 @@ function Headerrr() {
                 title="Features"
                 spy={true}
                 smooth={true}
-                offset={50}
-                duration={700}
+                offset={0}
+                duration={800}
                 onClick={() => {
                   setState(false);
                 }}
@@ -230,13 +230,13 @@ function Headerrr() {
 
             <StyledMenuItem icon={<ContactsOutlined />}>
               Contact Us
-              <StyledLinkS
+              <LinkS
                 to="ContactUS"
                 title="ContactUS"
                 spy={true}
                 smooth={true}
-                offset={50}
-                duration={700}
+                offset={0}
+                duration={800}
                 onClick={() => {
                   setState(false);
                 }}
