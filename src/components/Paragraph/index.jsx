@@ -16,7 +16,7 @@ export const Paragraph = styled.p`
   @media (max-width: 992px) {
     font-size: ${({ small }) => (small ? "16px" : "26px")};
     flex-direction: column;
-    padding: 10px;
+    padding: 10.5px;
     width: 100%;
   }
   @media (max-width: 768px) {
