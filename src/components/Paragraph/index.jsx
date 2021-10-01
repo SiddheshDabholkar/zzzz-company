@@ -9,14 +9,14 @@ export const Paragraph = styled.p`
 
   @media (min-width: 992px) {
     flex-direction: row;
-    padding: 20px;
+    padding: 20.5px;
     font-size: ${({ small }) => (small ? "20px" : "30px")};
     width: 50%;
   }
   @media (max-width: 992px) {
     font-size: ${({ small }) => (small ? "16px" : "26px")};
     flex-direction: column;
-    padding: 10px;
+    padding: 10.5px;
     width: 100%;
   }
   @media (max-width: 768px) {
