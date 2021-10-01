@@ -9,7 +9,7 @@ export const Paragraph = styled.p`
 
   @media (min-width: 992px) {
     flex-direction: row;
-    padding: 20px;
+    padding: 20.5px;
     font-size: ${({ small }) => (small ? "20px" : "30px")};
     width: 50%;
   }
